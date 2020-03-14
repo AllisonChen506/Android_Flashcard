@@ -24,12 +24,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.myBtn).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.addButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                MainActivity.this.startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
+                MainActivity.this.startActivityForResult(intent, 100);
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 100 & data != null) {
+            String string1 = data.getExtras().getString("string1", "What color are guavas?");
+            String string2 = data.getExtras().getString("string2", "green");
+        }
     }
 }
