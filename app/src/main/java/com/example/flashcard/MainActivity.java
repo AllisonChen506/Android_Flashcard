@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 100 & data != null) {
             String string1 = data.getExtras().getString("string1", "What color are guavas?");
             String string2 = data.getExtras().getString("string2", "green");
+            ((TextView)findViewById(R.id.flashcardquestion)).setText(string1);
+            ((TextView)findViewById(R.id.flashcardanswer)).setText(string2);
         }
     }
 }
