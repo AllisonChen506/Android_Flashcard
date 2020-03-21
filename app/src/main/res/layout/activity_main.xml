@@ -42,9 +42,19 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="14dp"
         android:layout_marginBottom="41dp"
-
         android:background="#047548"
         android:drawableLeft="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="339dp"
+        android:background="#047548"
+        android:drawableLeft="@mipmap/next" />
 
 
 </RelativeLayout>
